@@ -1,12 +1,11 @@
 from telegram import ReplyKeyboardMarkup
-from telegram.ext import ContextTypes
-from bot import CHOOSING_PLATFORM
 
-async def start(update, context: ContextTypes.DEFAULT_TYPE):
+async def start_handler(update, context):
     keyboard = [["Instagram", "YouTube"]]
 
     await update.message.reply_text(
-        "👋 Welcome to the Media Downloader Bot!\n\nSelect a platform:",
+        "👋 Welcome!\nSelect a platform:",
         reply_markup=ReplyKeyboardMarkup(keyboard, one_time_keyboard=True)
     )
-    return CHOOSING_PLATFORM
+
+    return 0   # CHOOSING_PLATFORM
