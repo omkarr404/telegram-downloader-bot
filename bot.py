@@ -9,7 +9,7 @@ from handlers.platform_handler import platform_handler
 from handlers.link_handler import link_handler
 from handlers.format_handler import format_handler
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+BOT_TOKEN = os.getenv("8110654234:AAHawXh47X84oomkTli46StSgWtDUBSmF1w")
 
 # States
 CHOOSING_PLATFORM, GETTING_LINK, CHOOSING_FORMAT = range(3)
