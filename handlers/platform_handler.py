@@ -1,7 +1,4 @@
-from telegram.ext import ContextTypes
-from bot import GETTING_LINK
-
-async def choose_platform(update, context: ContextTypes.DEFAULT_TYPE):
+async def platform_handler(update, context):
     context.user_data["platform"] = update.message.text
     await update.message.reply_text("📎 Send the media link:")
-    return GETTING_LINK
+    return 1   # GETTING_LINK
