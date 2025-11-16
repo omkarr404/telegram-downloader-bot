@@ -1,8 +1,7 @@
 from telegram import ReplyKeyboardMarkup
-from bot import CHOOSING_FORMAT
 
-async def receive_link(update, context):
-    context.user_data["link"] = update.message.text.strip()
+async def link_handler(update, context):
+    context.user_data["link"] = update.message.text
 
     keyboard = [["360p", "720p", "1080p", "Audio"]]
 
@@ -11,4 +10,4 @@ async def receive_link(update, context):
         reply_markup=ReplyKeyboardMarkup(keyboard, one_time_keyboard=True)
     )
 
-    return CHOOSING_FORMAT
+    return 2   # CHOOSING_FORMAT
